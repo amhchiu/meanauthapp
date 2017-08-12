@@ -12,10 +12,19 @@ export class RegisterComponent implements OnInit {
     username: string;
     email: string;
     password: string;
+    private emailVal: boolean;
 
     constructor(private validateService: ValidateService, private flashMessage: FlashMessagesService) { }
 
     ngOnInit() {
+    }
+
+    checkEmail(email){
+        if(!this.validateService.validateEmail(email) && email != null && email != ""){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     onRegisterSubmit(){
