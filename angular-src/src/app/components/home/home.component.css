@@ -1,0 +1,26 @@
+.home-header_card{
+    margin: auto;
+    width: 50%;
+    margin-top: 2em;
+    background: #9BC4AC;
+}
+.home-header_card.mdl-card{
+    width: 80vw;
+}
+.mdl-card__title{
+
+}
+.mdl-card__actions{
+    text-align: center;
+    display: flex;
+    width: 30%;
+    margin: auto;
+}
+.home-header_right{
+    text-align: center;
+}
+.home-header_image{
+    /*background: url('../../../assets/images/key-lock.png') center / cover;*/
+    width: auto;
+    height: auto;
+}
