@@ -63,4 +63,9 @@ router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res
     res.json({user: req.user});
 });
 
+// Stripe Online Payment
+router.post('/charge', function(req, res){
+    
+});
+
 module.exports = router;

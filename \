@@ -6,6 +6,8 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
+const stripe = require("stripe")("sk_test_srJQAVxDgtHMbDayf80aVBau");
+
 //----Mongodb database!!----
 //Connect to database 'meanauth'
 mongoose.connect(config.database);
@@ -45,11 +47,6 @@ app.use('/users', users);
 // Index page route!
 app.get('/', (req,res) =>{
     res.send('Invalid endpoint');
-});
-
-//Every route aside from specified ones goes to index.html file
-app.get('*', (req, res,) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
 const PORT = 3000;
